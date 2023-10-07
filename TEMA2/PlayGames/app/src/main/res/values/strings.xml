@@ -5,4 +5,13 @@
     <string name="new_player">New Player</string>
     <string name="preferencies">Preferencies</string>
     <string name="about">About</string>
+    <string name="player_name">Player Name</string>
+    <string name="phonetic_name">Phonetic Name</string>
+    <string name="nickname">NickName</string>
+    <string name="change">CHANGE</string>
+    <string name="e_mail">E-mail</string>
+    <string name="phone">Phone</string>
+    <string name="androidImage">Android Image</string>
+    <string name="photo">photo</string>
+    <string name="personimage">Person Icon</string>
 </resources>

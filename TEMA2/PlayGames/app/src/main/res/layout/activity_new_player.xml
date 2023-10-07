@@ -9,24 +9,223 @@
     <ScrollView
         android:id="@+id/scrollablContent"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="1"
+        android:padding="5dp">
+
+
+
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:stretchColumns="0,1,2"
+            android:layout_gravity="top"
+            android:gravity="center">
+
+
 
             <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/nameImage"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+
+                    android:layout_weight="0.2"
+                    android:src="@drawable/person_fill"
+                    android:contentDescription="@string/personimage" />
+
+                <EditText
+                    android:id="@+id/playerName"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_column="1"
+                    android:layout_weight="0.8"
+                    android:hint="@string/player_name"
+                    android:inputType="textPersonName" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                >
+                <ImageView
+                    android:visibility="invisible"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/ic_launcher_background" />
+
+                <EditText
+                    android:id="@+id/phoneticName"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:layout_weight="0.8"
+                    android:hint="@string/phonetic_name"
+                    android:inputType="textPhonetic" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/ic_launcher_background" />
+
+
+                <EditText
+                    android:id="@+id/nickName"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:layout_weight="0.8"
+                    android:hint="@string/nickname"
+                    android:inputType="text" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/camImage"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/photo_camera_fill"
+                    android:contentDescription="@string/photo" />
+
+                <ImageView
+                    android:id="@+id/playerImage"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_column="1"
+                    android:layout_weight="0.4"
+                    android:src="@drawable/android_robot_icon_22"
+                    android:contentDescription="@string/androidImage" />
+
+                <Button
+                    android:id="@+id/chooseImage"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_column="2"
+                    android:layout_weight="0.4"
+                    android:text="@string/change" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_column="0"
+                    android:layout_weight="0.7"
+                    />
+
+                <Spinner
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="0.10"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/phoneImage"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/call_fill"
+                    android:contentDescription="@string/phone" />
+
+                <EditText
+                    android:id="@+id/phoneInput"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_column="1"
+
+
+                    android:layout_weight="0.8"
+                    android:hint="@string/phone"
+                    android:inputType="phone" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/emailImage"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/mail_fill"
+                    android:contentDescription="@string/e_mail" />
+
+
+                <EditText
+                    android:id="@+id/emailInput"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_column="1"
+                    android:layout_weight="0.8"
+                    android:hint="@string/e_mail"
+                    android:inputType="textEmailAddress" />
+
 
             </TableRow>
         </TableLayout>

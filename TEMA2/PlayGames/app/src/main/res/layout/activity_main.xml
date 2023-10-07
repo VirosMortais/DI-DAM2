@@ -39,14 +39,16 @@
             />
 
         <Button
-            android:id="@+id/NewGameButton"
+            android:id="@+id/newPlayerButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/new_player"
             android:layout_margin="6dp"
             android:textStyle="bold"
+            android:clickable="true"
             tools:layout_editor_absoluteX="124dp"
-            tools:layout_editor_absoluteY="455dp" />
+            tools:layout_editor_absoluteY="455dp"
+            android:focusable="true" />
         <Button
             android:id="@+id/PreferecesButton"
             android:layout_width="300dp"
