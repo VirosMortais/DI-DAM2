@@ -20,214 +20,160 @@
 
 
 
-        <TableLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:stretchColumns="0,1,2"
-            android:layout_gravity="top"
-            android:gravity="center">
+            app:layout_constraintVertical_bias="1"
+            android:padding="5dp">
 
-
-
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp">
-
-
-                <ImageView
-                    android:id="@+id/nameImage"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_column="0"
-
-                    android:layout_weight="0.2"
-                    android:src="@drawable/person_fill"
-                    android:contentDescription="@string/personimage" />
+            <ImageView
+                android:id="@+id/nameImage"
+                android:layout_width="100dp"
+                android:layout_height="59dp"
+                android:contentDescription="@string/personimage"
+                android:src="@drawable/person_fill"
+                app:layout_constraintBottom_toTopOf="@+id/phoneticName"
+                app:layout_constraintEnd_toStartOf="@+id/playerName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
                     android:id="@+id/playerName"
                     android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_column="1"
-                    android:layout_weight="0.8"
+                    android:layout_height="48dp"
                     android:hint="@string/player_name"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    app:layout_constraintStart_toEndOf="@+id/nameImage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneticName"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
 
-            </TableRow>
-
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                >
-                <ImageView
-                    android:visibility="invisible"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_column="0"
-                    android:layout_weight="0.2"
-                    android:src="@drawable/ic_launcher_background" />
-
-                <EditText
-                    android:id="@+id/phoneticName"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_column="0"
-                    android:layout_weight="0.8"
-                    android:hint="@string/phonetic_name"
-                    android:inputType="textPhonetic" />
+            <EditText
+                android:id="@+id/phoneticName"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:hint="@string/phonetic_name"
+                android:inputType="textPhonetic"
+                app:layout_constraintStart_toEndOf="@+id/nameImage"
+                app:layout_constraintBottom_toTopOf="@+id/nickName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/playerName" />
 
 
-            </TableRow>
-
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp">
-
-                <ImageView
-                    android:visibility="invisible"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_column="0"
-                    android:layout_weight="0.2"
-                    android:src="@drawable/ic_launcher_background" />
+            <EditText
+                android:id="@+id/nickName"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:hint="@string/nickname"
+                android:inputType="text"
+                app:layout_constraintStart_toEndOf="@+id/nameImage"
+                app:layout_constraintBottom_toTopOf="@+id/playerImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneticName" />
 
 
-                <EditText
-                    android:id="@+id/nickName"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_column="0"
-                    android:layout_weight="0.8"
-                    android:hint="@string/nickname"
-                    android:inputType="text" />
-
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp">
 
                 <ImageView
                     android:id="@+id/camImage"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_column="0"
-                    android:layout_weight="0.2"
+                    android:layout_width="100dp"
+                    android:layout_height="59dp"
                     android:src="@drawable/photo_camera_fill"
-                    android:contentDescription="@string/photo" />
+                    android:contentDescription="@string/photo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/nickName"
+                    app:layout_constraintTop_toBottomOf="@+id/nickName"
+                    app:layout_constraintBottom_toTopOf="@+id/spinnerForm"
+                    />
 
                 <ImageView
                     android:id="@+id/playerImage"
                     android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_column="1"
-                    android:layout_weight="0.4"
+                    android:layout_height="50dp"
                     android:src="@drawable/android_robot_icon_22"
-                    android:contentDescription="@string/androidImage" />
+                    android:contentDescription="@string/androidImage"
+                    app:layout_constraintStart_toEndOf="@+id/camImage"
+                    app:layout_constraintEnd_toStartOf="@+id/chooseImage"
+                    app:layout_constraintTop_toBottomOf="@+id/nickName"
+                    app:layout_constraintBottom_toTopOf="@+id/spinnerForm"/>
 
                 <Button
                     android:id="@+id/chooseImage"
                     android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_column="2"
-                    android:layout_weight="0.4"
-                    android:text="@string/change" />
+                    android:layout_height="wrap_content"
+                    android:text="@string/change"
+                    app:layout_constraintStart_toEndOf="@+id/playerImage"
+                    app:layout_constraintTop_toBottomOf="@+id/nickName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/spinnerForm"/>
 
 
-            </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                >
 
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="20dp"
-                    android:layout_column="0"
-                    android:layout_weight="0.7"
-                    />
+
 
                 <Spinner
+                    android:id="@+id/spinnerForm"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.10"
-                    tools:ignore="TouchTargetSizeCheck" />
-            </TableRow>
+                    tools:ignore="TouchTargetSizeCheck"
+                    app:layout_constraintStart_toStartOf="@+id/chooseImage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chooseImage"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneInput"/>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp">
 
                 <ImageView
                     android:id="@+id/phoneImage"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_column="0"
-                    android:layout_weight="0.2"
+                    android:layout_width="100dp"
+                    android:layout_height="59dp"
                     android:src="@drawable/call_fill"
-                    android:contentDescription="@string/phone" />
+                    android:contentDescription="@string/phone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/camImage"
+                    app:layout_constraintTop_toBottomOf="@id/camImage"
+                    app:layout_constraintBottom_toTopOf="@+id/emailImage"
+                    />
 
                 <EditText
                     android:id="@+id/phoneInput"
                     android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_column="1"
-
-
-                    android:layout_weight="0.8"
+                    android:layout_height="48dp"
                     android:hint="@string/phone"
-                    android:inputType="phone" />
+                    android:inputType="phone"
+                    app:layout_constraintStart_toEndOf="@+id/phoneImage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerForm"
+                    app:layout_constraintBottom_toTopOf="@id/emailInput"/>
 
 
-            </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp">
 
                 <ImageView
                     android:id="@+id/emailImage"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_column="0"
-                    android:layout_weight="0.2"
+                    android:layout_width="100dp"
+                    android:layout_height="59dp"
                     android:src="@drawable/mail_fill"
-                    android:contentDescription="@string/e_mail" />
+                    android:contentDescription="@string/e_mail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/camImage"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneImage"
+                    />
 
 
                 <EditText
                     android:id="@+id/emailInput"
                     android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_column="1"
-                    android:layout_weight="0.8"
+                    android:layout_height="48dp"
                     android:hint="@string/e_mail"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintStart_toEndOf="@+id/emailImage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/phoneInput"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
 
-            </TableRow>
-        </TableLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

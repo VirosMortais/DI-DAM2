@@ -42,7 +42,6 @@
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_column="0"
-
                     android:layout_weight="0.2"
                     android:src="@drawable/person_fill"
                     android:contentDescription="@string/personimage" />
@@ -191,8 +190,6 @@
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_column="1"
-
-
                     android:layout_weight="0.8"
                     android:hint="@string/phone"
                     android:inputType="phone" />
