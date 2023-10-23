@@ -15,16 +15,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias="1"
-        android:padding="5dp">
+        >
 
 
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintVertical_bias="1"
-            android:padding="5dp">
+            >
+
+            <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:theme="?attr/actionBarTheme"
+                    android:minHeight="?attr/actionBarSize" android:id="@+id/toolbar"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"/>
 
             <ImageView
                 android:id="@+id/nameImage"
@@ -35,42 +43,42 @@
                 app:layout_constraintBottom_toTopOf="@+id/phoneticName"
                 app:layout_constraintEnd_toStartOf="@+id/playerName"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
 
                 <EditText
-                    android:id="@+id/playerName"
+                        android:id="@+id/playerName"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:hint="@string/player_name"
+                        android:inputType="textPersonName"
+                        app:layout_constraintStart_toEndOf="@+id/nameImage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/phoneticName"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar" android:autofillHints=""/>
+
+
+            <EditText
+                    android:id="@+id/phoneticName"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
-                    android:hint="@string/player_name"
-                    android:inputType="textPersonName"
+                    android:hint="@string/phonetic_name"
+                    android:inputType="textPhonetic"
                     app:layout_constraintStart_toEndOf="@+id/nameImage"
+                    app:layout_constraintBottom_toTopOf="@+id/nickName"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/phoneticName"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toBottomOf="@+id/playerName" android:autofillHints=""/>
 
 
             <EditText
-                android:id="@+id/phoneticName"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:hint="@string/phonetic_name"
-                android:inputType="textPhonetic"
-                app:layout_constraintStart_toEndOf="@+id/nameImage"
-                app:layout_constraintBottom_toTopOf="@+id/nickName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/playerName" />
-
-
-            <EditText
-                android:id="@+id/nickName"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:hint="@string/nickname"
-                android:inputType="text"
-                app:layout_constraintStart_toEndOf="@+id/nameImage"
-                app:layout_constraintBottom_toTopOf="@+id/playerImage"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/phoneticName" />
+                    android:id="@+id/nickName"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:hint="@string/nickname"
+                    android:inputType="text"
+                    app:layout_constraintStart_toEndOf="@+id/nameImage"
+                    app:layout_constraintBottom_toTopOf="@+id/playerImage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneticName" android:autofillHints=""/>
 
 
 
@@ -136,15 +144,15 @@
                     />
 
                 <EditText
-                    android:id="@+id/phoneInput"
-                    android:layout_width="0dp"
-                    android:layout_height="48dp"
-                    android:hint="@string/phone"
-                    android:inputType="phone"
-                    app:layout_constraintStart_toEndOf="@+id/phoneImage"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/spinnerForm"
-                    app:layout_constraintBottom_toTopOf="@id/emailInput"/>
+                        android:id="@+id/phoneInput"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:hint="@string/phone"
+                        android:inputType="phone"
+                        app:layout_constraintStart_toEndOf="@+id/phoneImage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/spinnerForm"
+                        app:layout_constraintBottom_toTopOf="@id/emailInput" android:autofillHints=""/>
 
 
 
@@ -163,15 +171,15 @@
 
 
                 <EditText
-                    android:id="@+id/emailInput"
-                    android:layout_width="0dp"
-                    android:layout_height="48dp"
-                    android:hint="@string/e_mail"
-                    android:inputType="textEmailAddress"
-                    app:layout_constraintStart_toEndOf="@+id/emailImage"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/phoneInput"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                        android:id="@+id/emailInput"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:hint="@string/e_mail"
+                        android:inputType="textEmailAddress"
+                        app:layout_constraintStart_toEndOf="@+id/emailImage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/phoneInput"
+                        app:layout_constraintBottom_toBottomOf="parent" android:autofillHints=""/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

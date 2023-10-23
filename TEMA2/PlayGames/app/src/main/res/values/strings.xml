@@ -14,4 +14,7 @@
     <string name="androidImage">Android Image</string>
     <string name="photo">photo</string>
     <string name="personimage">Person Icon</string>
+    <string name="action_add">add</string>
+    <string name="action_buscar">buscar</string>
+    <string name="action_settings">settings</string>
 </resources>

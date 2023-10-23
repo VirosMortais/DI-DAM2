@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".NewPlayer">
 
+
+
     <ScrollView
         android:id="@+id/scrollablContent"
         android:layout_width="match_parent"
@@ -15,18 +17,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias="1"
-        android:padding="5dp">
+        >
 
 
 
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:stretchColumns="0,1,2"
             android:layout_gravity="top"
             android:gravity="center">
 
+            <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:theme="?attr/actionBarTheme"
+                    android:minHeight="?attr/actionBarSize" android:id="@+id/toolbar"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"/>
 
 
             <TableRow
@@ -144,7 +153,8 @@
                     android:layout_height="50dp"
                     android:layout_column="2"
                     android:layout_weight="0.4"
-                    android:text="@string/change" />
+                    android:text="@string/change"
+                android:backgroundTint="@color/md_theme_light_secondary"/>
 
 
             </TableRow>
