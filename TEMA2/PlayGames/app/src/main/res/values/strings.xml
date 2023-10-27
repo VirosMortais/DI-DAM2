@@ -17,4 +17,10 @@
     <string name="action_add">add</string>
     <string name="action_buscar">buscar</string>
     <string name="action_settings">settings</string>
+    <string name="elige_opcion">Elige una opción</string>
+    <string name="angry_birds">Angry Birds</string>
+    <string name="dragon_fly">Dragon fly</string>
+    <string name="hill_climbing_racing">Hill climbing racing</string>
+    <string name="pocket_soccer">Pocket soccer</string>
+    <string name="radiant_defense">Radiant defense</string>
 </resources>

@@ -18,9 +18,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button newPlayerButton = findViewById(R.id.newPlayerButton);
+        Button preferencesButton = findViewById(R.id.PreferecesButton);
 
         newPlayerButton.setOnClickListener(v -> {
             Intent i = new Intent(this, NewPlayer.class);
+            startActivity(i);
+        });
+
+        preferencesButton.setOnClickListener(v -> {
+            Intent i = new Intent(this, Preferences.class);
             startActivity(i);
         });
     }
