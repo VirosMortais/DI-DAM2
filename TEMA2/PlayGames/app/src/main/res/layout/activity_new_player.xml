@@ -55,14 +55,23 @@
                     android:src="@drawable/person_fill"
                     android:contentDescription="@string/personimage" />
 
-                <EditText
-                    android:id="@+id/playerName"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TiLayoutplayerName"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_column="1"
                     android:layout_weight="0.8"
-                    android:hint="@string/player_name"
-                    android:inputType="textPersonName" />
+                    android:layout_marginEnd="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/playerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:hint="@string/player_name"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
 
 
             </TableRow>
@@ -82,15 +91,23 @@
                     android:layout_weight="0.2"
                     android:src="@drawable/ic_launcher_background" />
 
-                <EditText
-                    android:id="@+id/phoneticName"
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TiLayoutphoneticName"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
-                    android:layout_column="0"
+                    android:layout_column="1"
                     android:layout_weight="0.8"
-                    android:hint="@string/phonetic_name"
-                    android:inputType="textPhonetic" />
+                    android:layout_marginEnd="10dp">
 
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phoneticName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPhonetic"
+                        android:hint="@string/phonetic_name"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
 
             </TableRow>
 
@@ -110,14 +127,22 @@
                     android:src="@drawable/ic_launcher_background" />
 
 
-                <EditText
-                    android:id="@+id/nickName"
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TiLayoutnickname"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
-                    android:layout_column="0"
+                    android:layout_column="1"
                     android:layout_weight="0.8"
-                    android:hint="@string/nickname"
-                    android:inputType="text" />
+                    android:layout_marginEnd="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nickName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/nickname"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
 
 
             </TableRow>
@@ -154,7 +179,8 @@
                     android:layout_column="2"
                     android:layout_weight="0.4"
                     android:text="@string/change"
-                android:backgroundTint="@color/md_theme_light_secondary"/>
+                android:backgroundTint="@color/md_theme_light_secondary"
+                    android:layout_marginEnd="10dp"/>
 
 
             </TableRow>
@@ -202,7 +228,8 @@
                     android:layout_column="1"
                     android:layout_weight="0.8"
                     android:hint="@string/phone"
-                    android:inputType="phone" />
+                    android:inputType="phone"
+                    android:layout_marginEnd="10dp"/>
 
 
             </TableRow>
@@ -224,14 +251,23 @@
                     android:contentDescription="@string/e_mail" />
 
 
-                <EditText
-                    android:id="@+id/emailInput"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TiLayoutEmail"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_column="1"
                     android:layout_weight="0.8"
-                    android:hint="@string/e_mail"
-                    android:inputType="textEmailAddress" />
+                    android:layout_marginEnd="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/emailInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:hint="@string/e_mail"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
 
 
             </TableRow>
