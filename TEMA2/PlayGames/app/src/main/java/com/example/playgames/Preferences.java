@@ -25,6 +25,7 @@ public class Preferences extends AppCompatActivity {
         });
 
 
+
         final int maxValue = 5;
         final int minValue = 0;
         final double stepValue = 0.5;
@@ -37,6 +38,7 @@ public class Preferences extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 // Método llamado cuando se cambia el progreso de la SeekBar
                 progressChangedValue = minValue + (progress * stepValue);
+                ratingBar.setRating((float)progressChangedValue);
             }
 
             @Override
@@ -46,6 +48,7 @@ public class Preferences extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
+
                 Toast.makeText(ratingBar.getContext(), "Seek bar progress is :" + progressChangedValue,
                         Toast.LENGTH_SHORT).show();
             }
