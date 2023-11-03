@@ -2,4 +2,5 @@
 <resources>
     <string name="action_add">add</string>
     <string name="action_buscar">buscar</string>
+    <string name="generos">Géneros:</string>
 </resources>

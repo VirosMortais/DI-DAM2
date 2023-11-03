@@ -26,4 +26,13 @@
     <string name="add">ADD</string>
     <string name="todo">TODO</string>
     <string name="ninja_jump">Ninja jump</string>
+    <string name="wiiu">WIIU</string>
+    <string name="ps4">PS4</string>
+    <string name="pc">PC</string>
+    <string name="xbox">XBOX</string>
+    <string name="wii">WII</string>
+    <string name="ds3">3DS</string>
+    <string name="x360">X360</string>
+    <string name="plataformas">Plataformas</string>
+    <string name="generos">Géneros:</string>
 </resources>

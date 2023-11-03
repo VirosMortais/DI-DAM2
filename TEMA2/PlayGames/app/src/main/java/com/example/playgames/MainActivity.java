@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +37,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         });
 
+
+
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -48,8 +53,13 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
+        if(id == R.id.action_buscar){
+            Toast.makeText(this, "Buscando", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
         if (id == R.id.action_settings) {
-            Intent i = new Intent(this, Settings.class);
+            Intent i = new Intent(this, Plataformas.class);
             startActivity(i);
             return true;
         }

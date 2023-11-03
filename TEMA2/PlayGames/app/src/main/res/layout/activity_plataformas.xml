@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    style="@style/Base.Theme.PlayGames_NoActionBar"
+    tools:context=".Plataformas"
+    tools:ignore="MissingClass
+    ">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/plataformasViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plataformas"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/md_theme_dark_inversePrimary"
+            />
+
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/ps4"
+                android:text="@string/ps4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/pc"
+                android:text="@string/pc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/xbox"
+                android:text="@string/xbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/wii"
+                android:text="@string/wii"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/wiiu"
+                android:text="@string/wiiu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/ds3"
+                android:text="@string/ds3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/x360"
+                android:text="@string/x360"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/generosViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/generos"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/md_theme_dark_inversePrimary"
+            />
+
+        <ListView
+            android:id="@+id/generosListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
