@@ -1,13 +1,23 @@
 package com.example.playgames;
 
 import android.os.Bundle;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RatingBar;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
+
+
+
 public class Preferences extends AppCompatActivity {
+
+    private double progressChangedValue;
 
 
     @Override
@@ -19,26 +29,28 @@ public class Preferences extends AppCompatActivity {
         SeekBar seekBar = findViewById(R.id.seekBar);
         var fab = findViewById(R.id.fab);
 
+        final int maxValue = 5;
+
+        seekBar.setMax(maxValue);
+        ratingBar.setMax(maxValue);
+
         ratingBar.setOnRatingBarChangeListener(
                 (RatingBar ratingBar2, float rating, boolean fromUser)->{
                 //Método llamado cuando se llama el progreso de la RatingBar
+
+                seekBar.setProgress((int)rating);
         });
 
 
 
-        final int maxValue = 5;
-        final int minValue = 0;
-        final double stepValue = 0.5;
 
-        seekBar.setMax((int) ((maxValue - minValue) / stepValue));
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            double progressChangedValue;
+
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 // Método llamado cuando se cambia el progreso de la SeekBar
-                progressChangedValue = minValue + (progress * stepValue);
-                ratingBar.setRating((float)progressChangedValue);
+                ratingBar.setRating((float) progress);
             }
 
             @Override
@@ -54,8 +66,16 @@ public class Preferences extends AppCompatActivity {
             }
         });
 
+        RadioGroup rg = findViewById(R.id.radioGroup);
+
         fab.setOnClickListener(v -> {
-                Toast.makeText(this, "FAB Clicked!", Toast.LENGTH_SHORT).show();
+            RadioButton rb = findViewById(rg.getCheckedRadioButtonId());
+            if (rb != null) {
+                Toast.makeText(this, "Game: " + rb.getText().toString() + "\n Rating: " + ratingBar.getRating(), Toast.LENGTH_SHORT).show();
+            } else {
+                // Show a message to the user asking them to select a game
+                Toast.makeText(this, "Please select a game.", Toast.LENGTH_SHORT).show();
+            }
         });
 
     }

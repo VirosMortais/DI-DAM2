@@ -35,31 +35,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:hint="@string/angry_birds"/>
+            android:text="@string/angry_birds"/>
         <RadioButton
             android:id="@+id/drogonFlyButtom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:hint="@string/dragon_fly"/>
+            android:text="@string/dragon_fly"/>
         <RadioButton
             android:id="@+id/hillClimbingRacingButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:hint="@string/hill_climbing_racing"/>
+            android:text="@string/hill_climbing_racing"/>
         <RadioButton
             android:id="@+id/pocketSoccerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:hint="@string/pocket_soccer"/>
+            android:text="@string/pocket_soccer"/>
         <RadioButton
             android:id="@+id/radiantDefenseButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:hint="@string/radiant_defense"/>
+            android:text="@string/radiant_defense"/>
     </RadioGroup>
 
     <RatingBar
