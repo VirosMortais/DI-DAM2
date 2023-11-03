@@ -25,7 +25,7 @@
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/nosifer"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/PlayButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
             tools:layout_editor_absoluteY="517dp"
             />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/newPlayerButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             tools:layout_editor_absoluteX="124dp"
             tools:layout_editor_absoluteY="455dp"
             android:focusable="true" />
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/PreferecesButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -56,7 +56,8 @@
             android:textStyle="bold"
             tools:layout_editor_absoluteX="124dp"
             tools:layout_editor_absoluteY="455dp" />
-        <Button
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/AboutButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
