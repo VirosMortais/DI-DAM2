@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    style="@style/Base.Theme.PlayGames_NoActionBar"
-    tools:context=".Plataformas"
-    tools:ignore="MissingClass
-    ">
+    android:focusableInTouchMode="true"
+    tools:context=".Plataformas">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp">
+
         <TextView
             android:id="@+id/plataformasViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/plataformas"
-            android:textSize="30sp"
-            android:textStyle="bold"
             android:textColor="@color/md_theme_dark_inversePrimary"
-            />
-
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
 
         <com.google.android.material.chip.ChipGroup
@@ -34,46 +30,52 @@
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/ps4"
-                android:text="@string/ps4"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+                android:text="@string/ps4" />
+
             <com.google.android.material.chip.Chip
                 android:id="@+id/pc"
-                android:text="@string/pc"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+                android:text="@string/pc" />
+
             <com.google.android.material.chip.Chip
                 android:id="@+id/xbox"
-                android:text="@string/xbox"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+                android:text="@string/xbox" />
+
             <com.google.android.material.chip.Chip
                 android:id="@+id/wii"
-                android:text="@string/wii"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+                android:text="@string/wii" />
+
             <com.google.android.material.chip.Chip
                 android:id="@+id/wiiu"
-                android:text="@string/wiiu"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+                android:text="@string/wiiu" />
+
             <com.google.android.material.chip.Chip
                 android:id="@+id/ds3"
-                android:text="@string/ds3"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+                android:text="@string/ds3" />
+
             <com.google.android.material.chip.Chip
                 android:id="@+id/x360"
-                android:text="@string/x360"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.Chip.Filter"/>
+                android:text="@string/x360" />
         </com.google.android.material.chip.ChipGroup>
 
         <TextView
@@ -81,22 +83,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/generos"
-            android:textSize="25sp"
-            android:textStyle="bold"
             android:textColor="@color/md_theme_dark_inversePrimary"
-            />
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <ListView
             android:id="@+id/generosListView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+
+        </ListView>
 
 
     </LinearLayout>
 
 
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/md_theme_light_secondary"
+        app:fabAlignmentMode="center"
+        app:fabAnchorMode="cradle" />
 
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/baseline_add_24"
+        app:elevation="8dp"
+        app:fabSize="normal"
+        app:layout_anchor="@+id/bottomAppBar"
+        app:layout_anchorGravity="top|center" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

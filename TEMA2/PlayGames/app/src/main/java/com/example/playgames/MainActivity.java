@@ -54,13 +54,13 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if(id == R.id.action_buscar){
-            Toast.makeText(this, "Buscando", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(this, Plataformas.class);
+            startActivity(i);
             return true;
         }
 
         if (id == R.id.action_settings) {
-            Intent i = new Intent(this, Plataformas.class);
-            startActivity(i);
+            Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
             return true;
         }
 
