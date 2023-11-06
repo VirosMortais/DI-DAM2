@@ -9,6 +9,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.snackbar.Snackbar;
 
 
 import java.util.ArrayList;
@@ -52,6 +53,10 @@ public class Plataformas extends AppCompatActivity{
         var fab = findViewById(R.id.fab);
 
         bottomAppBar.setFabAlignmentMode(BottomAppBar.FAB_ALIGNMENT_MODE_CENTER);
+
+        fab.setOnClickListener(v -> {
+            Snackbar.make(v, "El botón se desplaza hacia arriba", Snackbar.LENGTH_LONG).show();
+        });
 
     }
 
