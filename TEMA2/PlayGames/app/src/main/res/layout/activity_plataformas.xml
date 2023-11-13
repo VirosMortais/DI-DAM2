@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
-    tools:context=".Plataformas">
+    tools:context=".search.Plataformas">
 
 
     <LinearLayout
@@ -87,12 +87,14 @@
             android:textSize="25sp"
             android:textStyle="bold" />
 
-        <ListView
-            android:id="@+id/generosListView"
+        <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </ListView>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/generosRecyclerView"
+            android:clipToPadding="false"
+            android:paddingBottom="72dp"
+            />
 
 
     </LinearLayout>

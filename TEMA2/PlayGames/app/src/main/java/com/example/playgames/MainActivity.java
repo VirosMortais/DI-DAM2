@@ -1,15 +1,15 @@
 package com.example.playgames;
 
-import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.playgames.search.Plataformas;
 
 public class MainActivity extends AppCompatActivity {
 
