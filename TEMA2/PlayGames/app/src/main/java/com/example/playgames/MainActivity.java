@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         playButton.setOnClickListener(v -> {
-            Intent i = new Intent(this, games.class);
+            Intent i = new Intent(this, Games.class);
             startActivity(i);
         });
 

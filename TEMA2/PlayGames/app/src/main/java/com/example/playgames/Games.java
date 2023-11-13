@@ -9,7 +9,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class games extends AppCompatActivity {
+public class Games extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

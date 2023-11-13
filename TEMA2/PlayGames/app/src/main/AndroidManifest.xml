@@ -19,7 +19,7 @@
             android:name=".search.Plataformas"
             android:exported="false" />
         <activity
-            android:name=".games"
+            android:name=".Games"
             android:exported="false" />
         <activity
             android:name=".NewPlayer"
