@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.playgames.about.About;
 import com.example.playgames.search.Plataformas;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Button newPlayerButton = findViewById(R.id.newPlayerButton);
         Button preferencesButton = findViewById(R.id.PreferecesButton);
         Button playButton = findViewById(R.id.PlayButton);
+        Button aboutButton = findViewById(R.id.AboutButton);
 
         newPlayerButton.setOnClickListener(v -> {
             Intent i = new Intent(this, NewPlayer.class);
@@ -37,7 +39,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         });
 
-
+        aboutButton.setOnClickListener(v -> {
+            Intent i = new Intent(this, About.class);
+            startActivity(i);
+        });
 
     }
 
