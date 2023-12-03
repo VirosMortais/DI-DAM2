@@ -6,6 +6,10 @@ android {
     namespace = "com.virosms.sol"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.virosms.sol"
         minSdk = 24
