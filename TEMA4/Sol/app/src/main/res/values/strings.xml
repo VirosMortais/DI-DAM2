@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Sol</string>
+    <string name="comparar_planetas">Comparar Planetas</string>
+    <string name="planeta_1">Planeta 1</string>
+    <string name="planeta_2">Planeta 2</string>
+    <string name="diametro">Diámetro</string>
+    <string name="densidad">Densidad</string>
+    <string name="distancia">Distancia al Sol</string>
+</resources>
