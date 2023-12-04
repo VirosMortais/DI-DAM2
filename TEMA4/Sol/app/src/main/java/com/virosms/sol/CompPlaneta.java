@@ -1,11 +1,9 @@
 package com.virosms.sol;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.virosms.sol.databinding.ActivityCompPlanetaBinding;
 import com.virosms.sol.entities.Planeta;
@@ -36,27 +34,39 @@ public class CompPlaneta extends AppCompatActivity {
             add(new Planeta("Neptuno", "49528", "4495.1", "1.64"));
         }};
 
-            ArrayAdapter<String> adapter = new ArrayAdapter<>(
+        ArrayAdapter<CharSequence> adapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_list_item_1,
                 planetas.stream().map(Planeta::getNombre).toArray(String[]::new)
-            );
+        );
 
-            binding.planeta1.setAdapter(adapter);
-            binding.planeta2.setAdapter(adapter);
+        binding.planeta1.setAdapter(adapter);
+        binding.planeta2.setAdapter(adapter);
 
-            binding.planeta1.setOnItemClickListener((parent, view, position, id) -> {
-                Planeta planeta = planetas.get(position);
-                binding.diametro1.setText(planeta.getDiametro());
-                binding.distancia1.setText(planeta.getDistanciaSol());
-                binding.densidad1.setText(planeta.getDensidad());
-            });
+        binding.planeta1.setOnItemClickListener((parent, view, position, id) -> {
+            binding.diametro1.setText(planetas.stream().filter(p -> p.getNombre()
+                    .equals(binding.planeta1.getText().toString())).findFirst()
+                    .map(Planeta::getDiametro).orElse(""));
+
+            binding.distancia1.setText(planetas.stream().filter(p -> p.getNombre()
+                    .equals(binding.planeta1.getText().toString())).findFirst()
+                    .map(Planeta::getDistanciaSol).orElse(""));
+
+            binding.densidad1.setText(planetas.stream().filter(p -> p.getNombre()
+                    .equals(binding.planeta1.getText().toString())).findFirst()
+                    .map(Planeta::getDensidad).orElse(""));
+        });
 
         binding.planeta2.setOnItemClickListener((parent, view, position, id) -> {
-            Planeta planeta = planetas.get(position);
-            binding.diametro2.setText(planeta.getDiametro());
-            binding.distancia2.setText(planeta.getDistanciaSol());
-            binding.densidad2.setText(planeta.getDensidad());
+            binding.diametro2.setText(planetas.stream().filter(p -> p.getNombre()
+                    .equals(binding.planeta2.getText().toString())).findFirst()
+                    .map(Planeta::getDiametro).orElse(""));
+            binding.distancia2.setText(planetas.stream().filter(p -> p.getNombre()
+                    .equals(binding.planeta2.getText().toString())).findFirst()
+                    .map(Planeta::getDistanciaSol).orElse(""));
+            binding.densidad2.setText(planetas.stream().filter(p -> p.getNombre()
+                    .equals(binding.planeta2.getText().toString())).findFirst()
+                    .map(Planeta::getDensidad).orElse(""));
         });
     }
 }
