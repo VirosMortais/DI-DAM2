@@ -32,6 +32,7 @@ public class CompPlaneta extends AppCompatActivity {
             add(new Planeta("Saturno", "120536", "1433.5", "0.69"));
             add(new Planeta("Urano", "51118", "2872.5", "1.27"));
             add(new Planeta("Neptuno", "49528", "4495.1", "1.64"));
+            add(new Planeta("Pluton", "???", "39,44", "5?"));
         }};
 
         ArrayAdapter<CharSequence> adapter = new ArrayAdapter<>(
