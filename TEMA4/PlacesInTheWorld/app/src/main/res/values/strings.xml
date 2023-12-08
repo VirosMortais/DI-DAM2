@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">PlacesInTheWorld</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">TODO</string>
+    <string name="accept">ACCEPT</string>
+    <string name="cancel">CANCEL</string>
+    <string name="fat">FAT</string>
+    <string name="icon">icon</string>
+    <string name="puntos_de_interes">Points of interest</string>
+    <string name="hoteles">Hotels</string>
+    <string name="restaurantes">Restaurants</string>
+    <string name="shows">Shows</string>
+    <string name="museums">Museums</string>
+    <string name="subTitle">Book your experience:</string>
+</resources>

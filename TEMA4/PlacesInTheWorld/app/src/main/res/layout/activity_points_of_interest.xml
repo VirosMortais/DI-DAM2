@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    tools:context=".PointsOfInterest">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/puntos_de_interes"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:textColor="@color/secondary_color"
+            android:fontFamily="@font/salty_ocean"
+            android:layout_gravity="center"/>
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/hotels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="@string/hoteles"/>
+            
+            <com.google.android.material.chip.Chip
+                android:id="@+id/restaurants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="@string/restaurantes"/>
+            
+            <com.google.android.material.chip.Chip
+                android:id="@+id/shows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="@string/shows"/>
+            
+            <com.google.android.material.chip.Chip
+                android:id="@+id/museums"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:text="@string/museums"/>
+            
+        </com.google.android.material.chip.ChipGroup>
+        
+        <TextView
+            android:id="@+id/subTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/subTitle"
+            android:textSize="20sp"
+            android:textColor="@color/secondary_color"
+            android:layout_marginTop="30dp"/>
+        
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginTop="20dp"/>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/primary_color"
+        app:fabAlignmentMode="center"
+        app:fabAnchorMode="cradle"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/secondary_color"
+        android:background="@color/secondary_color"
+        android:src="@drawable/ic_back_foreground"
+        app:borderWidth="0dp"
+        app:layout_anchor="@id/bottomAppBar"
+        android:contentDescription="@string/fat"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
