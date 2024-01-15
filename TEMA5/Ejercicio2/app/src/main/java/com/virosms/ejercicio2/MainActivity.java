@@ -7,21 +7,31 @@ import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.os.Bundle;
 
 import com.google.android.material.navigation.NavigationView;
+import com.virosms.ejercicio2.databinding.ActivityMainBinding;
+import com.virosms.ejercicio2.ui.gallery.GallaryAdapter;
+import com.virosms.ejercicio2.ui.gallery.GalleryFragment;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         //Utilizamos el toolbar definido en content_main
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

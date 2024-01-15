@@ -6,4 +6,7 @@
     <string name="gallery">Gallery</string>
     <string name="slideshow">Slideshow</string>
     <string name="image">Image</string>
+    <string name="cancel">Cancel</string>
+    <string name="accept">Accept</string>
+    <string name="todo">todo</string>
 </resources>
