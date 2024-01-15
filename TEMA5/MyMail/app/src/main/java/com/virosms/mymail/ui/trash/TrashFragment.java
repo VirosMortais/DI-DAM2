@@ -1,4 +1,4 @@
-package com.virosms.mymail.ui.slideshow;
+package com.virosms.mymail.ui.trash;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.virosms.mymail.databinding.FragmentSlideshowBinding;
+import com.virosms.mymail.databinding.FragmentTrashBinding;
 
-public class SlideshowFragment extends Fragment {
+public class TrashFragment extends Fragment {
 
-    private FragmentSlideshowBinding binding;
+    private FragmentTrashBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SlideshowViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        TrashViewModel trashViewModel =
+                new ViewModelProvider(this).get(TrashViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentTrashBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSlideshow;
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textTrash;
+        trashViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

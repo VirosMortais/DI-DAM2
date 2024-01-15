@@ -1,16 +1,16 @@
-package com.virosms.mymail.ui.home;
+package com.virosms.mymail.ui.trash;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class TrashViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public TrashViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is slideshow fragment");
     }
 
     public LiveData<String> getText() {

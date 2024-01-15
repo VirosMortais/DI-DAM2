@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="inbox">Inbox</string>
+    <string name="Outbox">Outbox</string>
+    <string name="Trash">Trash</string>
+    <string name="Spam">Spam</string>
+</resources>

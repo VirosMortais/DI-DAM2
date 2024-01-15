@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -21,7 +19,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.virosms.mymail.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
     private ArrayAdapter<String> adapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_inbox, R.id.nav_outbox, R.id.nav_trash)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -64,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
             add("Alex@gmail.com");
         }};
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, emails);
+
+
 
         // Aquí es donde configuras el ArrayAdapter en tu Spinner
         Spinner spinner = binding.navView.getHeaderView(0).findViewById(R.id.spinner);

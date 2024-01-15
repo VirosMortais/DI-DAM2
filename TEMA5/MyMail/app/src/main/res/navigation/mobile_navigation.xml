@@ -3,23 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_inbox">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.virosms.mymail.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_inbox"
+        android:name="com.virosms.mymail.ui.inbox.InboxFragment"
+        android:label="@string/inbox"
+        tools:layout="@layout/fragment_inbox" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.virosms.mymail.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_outbox"
+        android:name="com.virosms.mymail.ui.outbox.OutboxFragment"
+        android:label="@string/Outbox"
+        tools:layout="@layout/fragment_outbox" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.virosms.mymail.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_trash"
+        android:name="com.virosms.mymail.ui.trash.TrashFragment"
+        android:label="@string/Trash"
+        tools:layout="@layout/fragment_trash" />
+    <fragment
+        android:id="@+id/nav_spam"
+        android:name="com.virosms.mymail.ui.spam.SpamFragment"
+        android:label="@string/Spam"
+        tools:layout="@layout/fragment_spam" />
 </navigation>
