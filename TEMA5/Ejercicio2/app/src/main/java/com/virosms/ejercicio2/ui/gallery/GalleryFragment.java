@@ -2,7 +2,10 @@ package com.virosms.ejercicio2.ui.gallery;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.view.LayoutInflater;
@@ -42,16 +45,12 @@ public class GalleryFragment extends Fragment {
         add("Monte Vesubio");
     }};
 
-    private FragmentGalleryBinding binding;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = FragmentGalleryBinding.inflate(getLayoutInflater());
 
-
-        binding.recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        binding.recyclerView.setAdapter(new GallaryAdapter(imagenes, titulos));
     }
 
     @Override
@@ -60,7 +59,18 @@ public class GalleryFragment extends Fragment {
             ViewGroup container,
             Bundle savedInstanceState
     ) {
-        // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_gallery, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        RecyclerView recyclerView = requireView().findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        GallaryAdapter gallaryAdapter = new GallaryAdapter(imagenes, titulos);
+
+        recyclerView.setAdapter(gallaryAdapter);
     }
 }
