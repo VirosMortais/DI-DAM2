@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home">Home</string>
+    <string name="gallery">Gallery</string>
+    <string name="slide_show">Slide show</string>
+    <string name="todo">TODO</string>
+</resources>
