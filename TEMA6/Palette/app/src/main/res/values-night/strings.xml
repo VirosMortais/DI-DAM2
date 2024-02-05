@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="light_vibrant_color">light vibrant color</string>
+    <string name="muted_color">muted color</string>
+    <string name="light_muded_color">light muded color</string>
+    <string name="todo">TODO</string>
+</resources>

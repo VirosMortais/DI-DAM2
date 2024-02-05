@@ -1,0 +1,44 @@
+<!-- activity_image_palette.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ImagePalette">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/todo" />
+
+    <!-- Puedes agregar más elementos según tus necesidades -->
+    <TextView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/light_vibrant_color"/>
+    <TextView
+        android:id="@+id/imageView3"
+
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/muted_color"/>
+    <TextView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/dark_muted_color"/>
+    <TextView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/light_muded_color"/>
+</LinearLayout>
