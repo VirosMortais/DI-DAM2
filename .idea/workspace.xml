@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e83147b-6310-461a-ae81-d417637568bb" name="Changes" comment="Primera pratica tema 5" />
+    <list default="true" id="7e83147b-6310-461a-ae81-d417637568bb" name="Changes" comment="Pratica Pallete terminada gracias Alex">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,11 +38,11 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/chaarrsan/StudioProjects/DI-DAM2/TEMA5/Ejercicio2",
+    "last_opened_file_path": "/home/chaarrsan/AndroidStudioProjects/DI-DAM2",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -67,7 +69,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704738982067</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Pratica Pallete terminada gracias Alex">
+      <option name="closed" value="true" />
+      <created>1707156397936</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707156397936</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Pratica Pallete terminada gracias Alex">
+      <option name="closed" value="true" />
+      <created>1707156519398</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707156519398</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -83,8 +101,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/TEMA6/Palette" />
+    </ignored-roots>
     <MESSAGE value="Primero ejercicio hecho" />
     <MESSAGE value="Primera pratica tema 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primera pratica tema 5" />
+    <MESSAGE value="Pratica Pallete terminada gracias Alex" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pratica Pallete terminada gracias Alex" />
   </component>
 </project>
